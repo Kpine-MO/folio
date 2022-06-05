@@ -42,7 +42,7 @@ li{
 .login{
     text-decoration: none;
     color: whitesmoke;
-    border: 2px solid black;
+    border: 2px solid rgb(102, 76, 10);
     padding: 7px;
     text-transform: capitalize;
     font-family: nunito;
@@ -52,7 +52,7 @@ li{
 .sign-up{
     text-decoration: none;
     color: whitesmoke;
-    border: 2px solid black;
+    border: 2px solid rgb(102, 76, 10);
     padding: 7px;
     margin-left: 20px;
     text-transform: capitalize;
@@ -72,7 +72,7 @@ li{
     justify-content: space-between;
 }
 .inner-second h1{
-    color: rgb(102, 76, 10);
+    color: whitesmoke;
     text-transform: uppercase;
     margin-top: 200px;
     font-size: xx-large;
@@ -81,27 +81,63 @@ li{
     font-weight: bolder;
 }
 
+.inner-third h1{
+    color: whitesmoke;
+    text-transform: uppercase;
+    font-size: xx-large;
+    letter-spacing: 2px;
+    font-weight: bolder;
+}
+
+.inner-second .line{
+    margin-left: 70px;
+}
+
 .inner-second p{
     color: whitesmoke;
     margin-left: 70px;
     font-size: large;
     margin-top: 10px;
 }
- 
-strong{
+
+.inner-third p{
     color: whitesmoke;
+    font-size: large;
+    margin-top: 10px;
+}
+ 
+.line{
+    height: 1px;
+    background-color: grey;
+    width: 100px;
+    margin: 40px 0;
+}
+
+strong{
+    color: rgb(102, 76, 10);
     font-style: italic;
+}
+
+.btn-third{
+    width: 200px;
+    text-transform: uppercase;
+    height: 40px;
+    background-color: transparent;
+    color: whitesmoke;
+    border: 1px solid rgb(102, 76, 10);
+    margin-top: 100px;
+    cursor: pointer;
 }
 
 .btn{
     text-align: center;
 }
-button{
+.btn button{
     width: 150px;
     text-transform: uppercase;
     background-color: transparent;
     height: 40px;
-    border: 1px solid grey;
+    border: 1px solid rgb(102, 76, 10);
     cursor: pointer;
     margin-top: 90px;
     padding: 10px;
@@ -123,3 +159,28 @@ button{
     color: whitesmoke;
 }
 
+.third{
+    background-color: rgb(20, 19, 19);
+    display: flex;
+    justify-content: center;
+    height: 600px;
+}
+
+.photo{
+    background-image: url(/assets/images/style1.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 500px;
+    height: 400px;
+
+}
+.side-content{
+    color: whitesmoke;
+    margin-left: 60px;
+}
+
+.inner-third{
+    display: flex;
+    margin-top: 100px;
+}
