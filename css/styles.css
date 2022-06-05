@@ -1,0 +1,60 @@
+ *{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+.container{
+ display: flex;
+ flex-direction: column;
+}
+
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(11, 37, 11);
+    height: 60px;
+}
+
+ul{
+    display: flex;
+    list-style: none;
+    margin-top: 10px;
+}
+
+li{
+    padding: 10px;
+    text-transform: capitalize;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    color: whitesmoke;
+    font-family: nunito;
+}
+
+
+.links{
+    margin: 20px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.login{
+    text-decoration: none;
+    color: whitesmoke;
+    border: 2px solid black;
+    padding: 7px;
+    text-transform: capitalize;
+    font-family: nunito;
+    font-size: large;
+}
+
+.sign-up{
+    text-decoration: none;
+    color: whitesmoke;
+    border: 2px solid black;
+    padding: 7px;
+    margin-left: 20px;
+    text-transform: capitalize;
+    font-family: nunito;
+    font-size: large;
+}
