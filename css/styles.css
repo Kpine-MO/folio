@@ -15,6 +15,8 @@
     justify-content: space-between;
     background-color: rgb(44, 43, 43);
     height: 60px;
+    width: 100%;
+    padding-top: 0;
 }
 
 ul{
@@ -24,14 +26,33 @@ ul{
 }
 
 li{
+    position: relative;
     padding: 10px;
     text-transform: capitalize;
     font-family: Arial, Helvetica, sans-serif;
     font-size: large;
     color: whitesmoke;
     font-family: nunito;
+    cursor: pointer;
 }
-
+li:after{
+    content: "";
+    position: absolute;
+    background-color: rgb(177, 129, 7);
+    height: 2px;
+    width: 0;
+    left: 0;
+    bottom: -5px;
+    margin: 0;
+    padding: 0;
+    transition: 0.5s;
+}
+li:hover::after{
+    width: 100%;
+}
+ul a{
+    text-decoration: none;
+}
 
 .links{
     margin: 20px;
@@ -61,8 +82,8 @@ li{
 }
 
 .second{
-    height: 600px;
-    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.4)),url(/assets/images/style2.jpeg);
+    height: 700px;
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.4)),url(/assets/images/style3.jpeg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -161,9 +182,7 @@ strong{
 
 .third{
     background-color: rgb(20, 19, 19);
-    display: flex;
-    justify-content: center;
-    height: 600px;
+    height: 900px;
 }
 
 .photo{
@@ -173,14 +192,362 @@ strong{
     background-size: cover;
     width: 500px;
     height: 400px;
-
+    margin-left: 70px;
 }
 .side-content{
     color: whitesmoke;
-    margin-left: 60px;
+    margin-left: 100px;
 }
 
 .inner-third{
     display: flex;
     margin-top: 100px;
+}
+
+.services-container{
+    display: flex;
+    margin-left: 70px;
+    margin-top: 70px;
+}
+
+.services{
+    height: 240px;
+    width: 160px;
+    background-color: rgb(36, 35, 35);
+    text-align: center;
+    margin-right: 70px;
+    border-radius: 15px;
+}
+
+.services h2{
+    text-transform: uppercase;
+    color: whitesmoke;
+    margin-bottom: 10px;
+    padding-top: 30px;
+    font-size: large;
+}
+
+.services a{
+    text-decoration: none;
+    color: rgb(156, 114, 6);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.services p{
+    margin-bottom: 20px;
+    color: whitesmoke;
+}
+
+:root {
+    --main-color: #2980b9;
+    --form-bg: rgba(0, 0, 0, 0.8);
+    --border-color: #2980b9;
+    --form-color: #c6c6c6;
+    --form-input-bg: rgba(2, 2, 2, 0.22);
+    --border-radius: 10px;
+    --form-logo-size: 200px;
+}
+
+
+
+ .login-back{
+    background-color: rgb(34, 34, 34);
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}    
+
+.form {
+    padding: 50px 60px;
+    background-color: rgb(56, 56, 56);
+    border-radius: var(--border-radius);
+    color: var(--form-color);
+    text-align: center;
+    width: 100%;
+    max-width: var(--form-max-width);
+}
+
+.form-logo {
+    display: block;
+    margin-bottom: 50px;
+}
+
+.form-logo img {
+    width: var(--form-logo-size);
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.form-input {
+    background-color: var(--form-input-bg);
+    border: 2px solid transparent;
+    height: 46px;
+    width: 100%;
+    position: relative;
+    color: var(--form-color);
+    border-radius: var(--border-radius);
+    padding: 0 20px;
+    font-size: 16px;
+    outline: none;
+    transition: border 0.3s ease-in-out;
+}
+
+.form-input::placeholder {
+    color: var(--form-color);
+}
+
+.form-input:focus {
+    border: 2px solid var(--border-color);
+}
+
+.form-input-icon {
+    position: absolute;
+    right: 10px;
+    top: 14px;
+    transform: scale(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.form-input-icon.err {
+    color: #c0392b;
+}
+
+.form-input-icon.success {
+    color: #27ae60;
+}
+
+.form-group.err .form-input-icon.err,
+.form-group.success .form-input-icon.success {
+    transform: scale(1);
+}
+
+.form-input-err-msg {
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    margin-top: 10px;
+    padding-left: 20px;
+    color: #c0392b;
+}
+
+.form-group-checkbox {
+    text-align: left;
+}
+
+.form-group-checkbox input {
+    opacity: 0;
+    height: 0;
+    width: 0;
+    cursor: pointer;
+}
+
+.form-group-checkbox label {
+    cursor: pointer;
+    padding-left: 30px;
+    position: relative;
+}
+
+.form-group-checkbox label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 22px;
+    height: 22px;
+    background-color: var(--form-input-bg);
+}
+
+.form-group-checkbox label i {
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    color: var(--main-color);
+    transition: transform 0.3s ease-in-out;
+    transform: scale(0);
+}
+
+.form-group-checkbox input:checked + label i {
+    transform: scale(1);
+}
+
+.form-btn {
+    margin: 15px 0;
+    height: 46px;
+    width: 100%;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--main-color);
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    color: var(--main-color);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+}
+
+.form-btn:hover {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+.form-social {
+    margin: 15px 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-social-item {
+    display: grid;
+    place-items: center;
+    height: 44px;
+    width: calc(33% - 10px);
+    text-decoration: none;
+    border-radius: var(--border-radius);
+}
+
+.form-social-item i {
+    font-size: 22px;
+    color: #fff;
+}
+
+.form-social-item.fb {
+    background-color: #3b5999;
+}
+
+.form-social-item.tw {
+    background-color: #1da1f2;
+}
+
+.form-social-item.gg {
+    background-color: #df4a32;
+}
+
+.form-txt {
+    margin-top: 15px;
+    font-size: 14px;
+    display: block;
+}
+
+.form-txt a {
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+.form-txt a:hover {
+    text-decoration: underline;
+}
+/*about css*/
+.about-container{
+    display: flex;
+    height: 100vh;
+    padding-left:200px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+
+}
+
+.about-one{
+    width: 50px;
+    background-color: rgba(37, 37, 37,0.9);
+}
+.communicate{
+    margin-top: 230px;
+    color: gray;
+    font-size: small;
+    text-align: center;
+}
+.communicate i{
+    cursor: pointer;
+}
+
+.communicate i:hover{
+    color: rgb(156, 114, 6);
+}
+.about-two{
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.4)),url(/assets/images/about.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 250px;
+    text-align: center;
+}
+
+.about-two h1{
+margin-top: 400px;
+color: rgb(170, 170, 170);
+text-transform: capitalize;
+}
+
+.about-two i{
+    color: rgb(156, 114, 6);
+    padding-right: 10px;
+}
+  
+.about-three{
+    background-color: rgba(37, 37, 37,0.9);
+    width: 600px;
+    padding-left: 30px;
+}
+.about-three h1{
+    color: #c6c6c6;
+    text-transform: capitalize;
+    margin-top: 10px;
+}
+.about-three button{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: rgb(170, 170, 170);
+    text-transform: capitalize;
+    font-size: large;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+.about-three button:hover{
+    color: rgb(160, 116, 6);
+}
+ .about-services{
+     display: flex;
+     flex-wrap: wrap;
+     border: 1px solid #c6c6c6;
+     width: 550px;
+ }
+
+ .out-about{
+     margin-top: 20px;
+ }
+
+.about-serv{
+    margin-right: 50px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+ 
+
+
+.about-serv h3, .out-about h2{
+    color: rgb(170, 170, 170);
+    text-transform: capitalize;
+    font-size: large;
+}
+.about-container{
+    background-color: rgb(24, 23, 23);
+    display: flex;
+}
+@media only screen and (max-width: 500px) {
+    .form {
+        height: 100vh;
+        width: 100%;
+        max-width: unset;
+        padding: 50px 30px;
+        border-radius: 0;
+    }
 }

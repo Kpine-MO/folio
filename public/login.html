@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="/css/styles.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Adamina&family=Bitter&family=Nunito:ital,wght@0,300;1,200&family=Poppins:wght@300&family=Teko:wght@300&display=swap"
+			rel="stylesheet"
+		/>
+		<script
+			src="https://kit.fontawesome.com/e2eb231d20.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<body class="login-back">
+        <div class="navigation">
+            <nav>
+                <ul>
+                    <a href="./index.html"><li>home</li></a>
+                    <a href="#"><li>services</li></a>
+                    <a href="/public/about.html"><li>about</li></a>
+                    <a href="#"><li>contact us</li></a>
+                    <a href="#"><li>appointments</li></a>
+                </ul>
+            </nav>
+            <div class="links">
+                <a href="./public/login.html" class="login">login</a>
+                <a href="" class="sign-up">sign up</a>
+            </div>
+        </div>
+		<form action="index.html">
+			<div class="form" id="signin-form">
+				<div class="form-group">
+					<input
+						type="email"
+						class="form-input"
+						placeholder="Email"
+						id="signin-email"
+						required
+					/>
+					<span class="form-input-icon err">
+						<i class="bx bx-error-circle"></i>
+					</span>
+					<span class="form-input-icon success">
+						<i class="bx bx-check-circle"></i>
+					</span>
+					<span class="form-input-err-msg" data-err-for="signin-email"></span>
+				</div>
+				<div class="form-group">
+					<input
+						type="password"
+						class="form-input"
+						placeholder="Password"
+						id="signin-password"
+						required
+					/>
+					<span class="form-input-icon err">
+						<i class="bx bx-error-circle"></i>
+					</span>
+					<span class="form-input-icon success">
+						<i class="bx bx-check-circle"></i>
+					</span>
+					<span
+						class="form-input-err-msg"
+						data-err-for="signin-password"
+					></span>
+				</div>
+				<div class="form-group form-group-checkbox">
+					<input
+						type="checkbox"
+						name="remember"
+						id="remember"
+						checked="checked"
+					/>
+					<label for="remember">
+						Remember Me
+						<i class="fa fa-check" aria-hidden="true"></i>
+					</label>
+				</div>
+				<button class="form-btn" id="signin-btn">Sign in</button>
+				<span class="form-delimiter"> or connect with </span>
+				<div class="form-social">
+					<a href="#" class="form-social-item fb">
+						<i class="fa fa-facebook-official" aria-hidden="true"></i>
+					</a>
+					<a href="#" class="form-social-item tw">
+						<i class="fa fa-google" aria-hidden="true"></i>
+					</a>
+					<a href="#" class="form-social-item gg">
+						<i class="fa fa-twitter" aria-hidden="true"></i>
+					</a>
+				</div>
+				<span class="form-txt">
+					Don't have an account?
+					<a href="#">Sign up!</a>
+				</span>
+				<span class="form-txt">
+					<a href="#">Forgot password?</a>
+				</span>
+			</div>
+		</form>
+	</body>
+</html>
