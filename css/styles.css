@@ -148,6 +148,12 @@ strong{
     border: 1px solid rgb(102, 76, 10);
     margin-top: 100px;
     cursor: pointer;
+    transition: 0.5s;
+    transform-origin: center;
+}
+
+.btn-third:hover{
+ background-color: rgb(160, 116, 6);
 }
 
 .btn{
@@ -164,8 +170,11 @@ strong{
     padding: 10px;
     color: whitesmoke;
     border-radius: 10px;
+    transition: 0.5s;
 }
-
+.btn button:hover{
+    background-color: rgb(156, 114, 6);
+}
 .social-media{
     margin-top: 200px;
     background-color: rgb(160, 116, 6);
